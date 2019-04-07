@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "994556241774",
+    "firebase_url": "https://marcarconsultanmp.firebaseio.com",
+    "project_id": "marcarconsultanmp",
+    "storage_bucket": "marcarconsultanmp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994556241774:android:fe5b2ea23e81d524",
+        "android_client_info": {
+          "package_name": "com.example.marcarconsulta_login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994556241774-2qg4h1f4poro7mdigu3s05s88ljb4rir.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.marcarconsulta_login",
+            "certificate_hash": "2478abab32c9d1d45be8408c6e02193bdcb03151"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDUbSPgKMBftxrzuWUY-Sk-VHlKNKmlC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994556241774-oc9c1aqaermhrd3ojccrunae983bogir.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
