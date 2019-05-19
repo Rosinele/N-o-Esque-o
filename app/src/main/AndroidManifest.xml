@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResetSenha"></activity>
+        <activity android:name=".Resumo"></activity>
+        <activity android:name=".CadastrarSessao" />
+        <activity android:name=".ListaLocal" />
+        <activity android:name=".ListaArea" />
+        <activity android:name=".ResetSenha" />
         <activity android:name=".Cadastro" />
         <activity android:name=".Perfil" />
         <activity android:name=".Login">

@@ -91,4 +91,4 @@ public class Login extends AppCompatActivity {
         super.onStart();
         auth = Conexao.getFirebaseAuth();
     }
-    }
+}

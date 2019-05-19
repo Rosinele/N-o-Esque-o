@@ -1,5 +1,6 @@
 package com.example.marcarconsulta_login;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,8 +12,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Perfil extends AppCompatActivity {
 
-    private TextView textEmail, textID;
-    private Button btnLogOut;
+    private TextView textNome;
+    private Button btnLogOut, btnAgendar, btnAgendarDois;
 
     private FirebaseAuth auth;
     private FirebaseUser user;
@@ -34,12 +35,32 @@ public class Perfil extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        btnAgendar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Perfil.this, ListaArea.class);
+                startActivity(i);
+            }
+        });
+
+        btnAgendarDois.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Perfil.this, CadastrarSessao.class);
+                startActivity(i);
+            }
+        });
+
+
     }
 
     private void inicializaComponentes(){
-        textEmail = (TextView) findViewById(R.id.tvPerfilEmail);
-        textID = (TextView) findViewById(R.id.tvPerfilId);
+        textNome = (TextView) findViewById(R.id.tvPerfilNome);
         btnLogOut = (Button) findViewById(R.id.btnPerfilLogOut);
+        btnAgendar = (Button) findViewById(R.id.btnPerfilAgendar);
+        btnAgendarDois = (Button) findViewById(R.id.btnPerfilAgendarDois);
     }
 
     @Override
@@ -54,8 +75,7 @@ public class Perfil extends AppCompatActivity {
         if(user == null){
             finish();
         }else{
-            textEmail.setText("Email: "+user.getEmail());
-            textID.setText("ID: "+user.getUid());
+            textNome.setText("Bem vindx "+user.getEmail());
         }
     }
 }
