@@ -1,15 +1,21 @@
 package com.example.marcarconsulta_login.modelo;
 
 
+import android.widget.Spinner;
+
 public class Sessao {
     private String uid;
     private String area;
     private String local;
     private String data;
-
+    private String hora;
 
     public Sessao() {
     }
+
+    public String getHora() { return hora; }
+
+    public void setHora(String hora) { this.hora = hora; }
 
     public String getUid() {
         return uid;
@@ -45,7 +51,10 @@ public class Sessao {
 
     @Override
     public String toString() {
-        return area;/*"Sessao{" +
+        String msg = ("Area: " + area
+                + "Local: " + local +
+                "Data: " + data + hora);
+        return msg;/*"Sessao{" +
                 "area='" + area + '\'' +
                 '}'; */
     }

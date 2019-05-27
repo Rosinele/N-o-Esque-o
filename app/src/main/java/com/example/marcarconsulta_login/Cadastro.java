@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Cadastro extends AppCompatActivity {
 
     private EditText editEmail, editSenha, editNome;
-    private Button btnRegistrar, btnVoltar;
+    private Button btnRegistrar;
     private FirebaseAuth auth;
 
     @Override
@@ -30,12 +30,6 @@ public class Cadastro extends AppCompatActivity {
     }
 
     private void eventoClicks() {
-        btnVoltar.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +53,7 @@ public class Cadastro extends AppCompatActivity {
                     startActivity(i);
                     finish();
                 }else{
-                    alert("Erro de cadastro");
+                    alert("Não foi possível realizar o seu cadastro no momento.");
                }
             }
         });
@@ -74,7 +68,6 @@ public class Cadastro extends AppCompatActivity {
         editNome = (EditText) findViewById(R.id.etCadastroNome);
         editSenha = (EditText) findViewById(R.id.etCadastroSenha);
         btnRegistrar = (Button) findViewById(R.id.btnCadastroRegistrar);
-        btnVoltar = (Button) findViewById(R.id.btnCadastroVoltar);
     }
 
     @Override

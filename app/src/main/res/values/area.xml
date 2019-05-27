@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="area">
+        <item>Selecione</item>
+        <item>Axila</item>
+        <item>Coxa</item>
+        <item>Panturrilha</item>
+        <item>Peito</item>
+        <item>Facial</item>
+        <item>Virilha</item>
+        <item>Buço</item>
+        <item>Braço</item>
+        <item>Abdomen</item>
+        <item>Costas</item>
+    </string-array>
+</resources>

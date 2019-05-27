@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="local">
+        <item> Selecione</item>
+        <item> Av. Treze de Maio, 2072</item>
+        <item> Av. Professor Gomes de Matos, 661 - Loja A </item>
+        <item> Av. Sargento Hermínio Sampaio, 3100 - 2112</item>
+        <item> Av. Lineu Machado, North shopping joquei, loja 2008 Piso 2</item>
+        <item> Av. Senador Virgílio Távora, 1461</item>
+        <item> Shopping Cambeba Open Mall, Av. Washington Soares, 6180</item>
+        <item> Av. Bezerra de Menezes, 1985</item>
+        <item> Papicu R. Dr. Gilberto Studart, 155</item>
+    </string-array>
+</resources>

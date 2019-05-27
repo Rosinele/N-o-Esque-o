@@ -12,8 +12,9 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Perfil extends AppCompatActivity {
 
-    private TextView textNome;
-    private Button btnLogOut, btnAgendar, btnAgendarDois;
+    private TextView textNome, btnLogOut;
+    private Button btnAgendarDois, btnCuidados;
+
 
     private FirebaseAuth auth;
     private FirebaseUser user;
@@ -37,18 +38,18 @@ public class Perfil extends AppCompatActivity {
         });
 
 
-        btnAgendar.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Perfil.this, ListaArea.class);
-                startActivity(i);
-            }
-        });
-
         btnAgendarDois.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Perfil.this, CadastrarSessao.class);
+                startActivity(i);
+            }
+        });
+
+        btnCuidados.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Perfil.this, Pre.class);
                 startActivity(i);
             }
         });
@@ -58,9 +59,9 @@ public class Perfil extends AppCompatActivity {
 
     private void inicializaComponentes(){
         textNome = (TextView) findViewById(R.id.tvPerfilNome);
-        btnLogOut = (Button) findViewById(R.id.btnPerfilLogOut);
-        btnAgendar = (Button) findViewById(R.id.btnPerfilAgendar);
+        btnLogOut = (TextView) findViewById(R.id.tvPerfilSair);
         btnAgendarDois = (Button) findViewById(R.id.btnPerfilAgendarDois);
+        btnCuidados = (Button) findViewById(R.id.btnDicaseCuidados);
     }
 
     @Override
@@ -75,7 +76,7 @@ public class Perfil extends AppCompatActivity {
         if(user == null){
             finish();
         }else{
-            textNome.setText("Bem vindx "+user.getEmail());
+            textNome.setText(user.getEmail());
         }
     }
 }

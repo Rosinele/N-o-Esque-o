@@ -11,14 +11,18 @@ import android.widget.ListView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class ListaArea extends AppCompatActivity {
+public class ListaPos extends AppCompatActivity {
 
     private ListView listaItens;
-    private Button btnVoltar;
     private String[] itens = {
-            "Axila", "Buço", "Braço", "Panturrilha", "Virilha", "Coxa", "Abdomem", "Peito", "Lombar", "Facial", "Axila", "Buço", "Braço", "Panturrilha", "Virilha", "Coxa", "Abdomem", "Peito", "Lombar", "Facial"
+            "Evite exposição ao sol 15 dias depois de cada sessão e dobre os cuidados nas 72h após o tratamento.",
+            "Utilize continuamente o filtro solar com fator igual ou superior a 25 até o final do tratamento.",
+            "Hidrate sua pele com o creme de hidratação Não+Pelo nos 5 dias posteriores à sessão para restaurá-la. Hidratantes com ação anti-inflamatória ou cicatrizante podem ajudar a sua pele a se recuperar mais rápido após as sessões. Se houver dúvida, consulte o seu dermatologista.",
+            "Sempre utilize sabonete neutro nas áreas onde realizou sessões de luz pulsada. Outros sabonetes podem ressecar a pele.",
+            "Se receber alguma orientação dos nossos profissionais ou do seu médico para evitar algum dermocosmético após as sessões, confie e siga a orientação. Cada pele reage de uma forma e você precisa ficar atenta aos cuidados especiais.",
+            "Continue utilizando apenas lâminas, aparadores ou creme depilatório se precisar remover os pelos.",
+            "Organize-se para não faltar à próxima sessão agendada, a frequência é essencial para o sucesso do resultado que você almeja."
     };
-
 
     private FirebaseAuth auth;
 
@@ -26,9 +30,9 @@ public class ListaArea extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seleciona_area);
+        setContentView(R.layout.activity_selecionar_pos);
 
-        listaItens = (ListView) findViewById(R.id.lvArea);
+        listaItens = (ListView) findViewById(R.id.lvPos);
 
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(
                 getApplicationContext(),
@@ -40,7 +44,6 @@ public class ListaArea extends AppCompatActivity {
         listaItens.setAdapter(adaptador);
         inicializaComponentes();
         eventoClick();
-
     }
 
     private void eventoClick(){
@@ -49,19 +52,7 @@ public class ListaArea extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 int codigoposicao = position;
                 String valorclicado = listaItens.getItemAtPosition(codigoposicao).toString();
-                Intent i = new Intent(ListaArea.this, ListaLocal.class);
-                startActivity(i);
-
-                Intent intent = new Intent(ListaArea.this, Resumo.class);
-                intent.putExtra("Area clicada", valorclicado);
-                startActivity(intent);
-            }
-        });
-
-        btnVoltar.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ListaArea.this, Perfil.class);
+                Intent i = new Intent(ListaPos.this, Perfil.class);
                 startActivity(i);
             }
         });
@@ -69,8 +60,7 @@ public class ListaArea extends AppCompatActivity {
     }
 
     private void inicializaComponentes(){
-        btnVoltar = (Button) findViewById(R.id.btnAreaVoltar);
-        listaItens = (ListView) findViewById(R.id.lvArea);
+        listaItens = (ListView) findViewById(R.id.lvPos);
     }
 
 

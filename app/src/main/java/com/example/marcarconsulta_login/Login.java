@@ -1,10 +1,9 @@
 package com.example.marcarconsulta_login;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,8 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login extends AppCompatActivity {
 
     private EditText editEmail, editSenha;
-    private Button btnLogin , btnNovo;
-    private TextView txtResetSenha;
+    private Button btnLogin;
+    private TextView txtResetSenha, txtNovo;
 
     private FirebaseAuth auth;
 
@@ -28,12 +27,13 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         inicializaComponentes();
         eventoClicks();
     }
 
     private void eventoClicks() {
-        btnNovo.setOnClickListener(new View.OnClickListener() {
+        txtNovo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Cadastro.class);
@@ -82,7 +82,7 @@ public class Login extends AppCompatActivity {
         editEmail = (EditText) findViewById(R.id.editLoginEmail);
         editSenha = (EditText) findViewById(R.id.etLoginSenha);
         btnLogin = (Button) findViewById(R.id.btnLoginLogar);
-        btnNovo = (Button) findViewById(R.id.btnLoginNovoUsuario);
+        txtNovo = (TextView) findViewById(R.id.txtLoginCadastrar);
         txtResetSenha = (TextView) findViewById(R.id.infoLoginResetSenha);
     }
 

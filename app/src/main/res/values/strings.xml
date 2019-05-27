@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MarcarConsulta_login</string>
     <string name="title_activity_cadastro">Cadastro</string>
+    <string name="esqueceu_sua_senha">Esqueceu sua senha?</string>
+    <string name="cadastrar_se">Cadastrar-se.</string>
+    <string name="email">Email</string>
 </resources>
