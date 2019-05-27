@@ -9,7 +9,7 @@
         android:allowBackup="true"
         android:background="#8873B4"
         android:icon="@mipmap/logo"
-        android:label="Não+Esqueço"
+        android:label=""
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
